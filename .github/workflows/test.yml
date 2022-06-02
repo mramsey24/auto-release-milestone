@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-  milestone':
+  milestone:
     types: [closed]
 
 jobs:
