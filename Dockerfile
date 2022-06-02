@@ -7,8 +7,12 @@ LABEL version="0.1.0"
 LABEL repository="https://github.com/mramsey24"
 LABEL maintainer="Mark Ramsey"
 
+RUN apt-get update && apt-get install -y jq
+RUN dotnet tool install -g GitReleaseManager.Tool
+
+ENV PATH /root/.dotnet/tools:$PATH
+
 COPY entrypoint.sh /
 RUN chmod +x entrypoint.sh
 
-#CMD ["/bin/ls", "-al"]
 ENTRYPOINT [ "/entrypoint.sh" ]
