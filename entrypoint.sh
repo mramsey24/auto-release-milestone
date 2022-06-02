@@ -2,6 +2,6 @@
 set -u
 
 # Logging Commands
-echo "::set-ouptut name=release-url::http://example.com"
+echo "::set-output name=release-url::http://example.com"
 
 exit 0

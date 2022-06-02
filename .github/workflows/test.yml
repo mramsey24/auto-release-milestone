@@ -19,5 +19,5 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Print the URL of the release draft
-        if: steps.create-release-draft.outputs.release_url != 'docker'
+        if: steps.create-release-draft.outputs.release_url != ''
         run: echo ${{ steps.create-release-draft.outputs.release_url }}
