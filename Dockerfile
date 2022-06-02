@@ -8,5 +8,7 @@ LABEL repository="https://github.com/mramsey24"
 LABEL maintainer="Mark Ramsey"
 
 COPY entrypoint.sh /
-CMD ["/bin/ls", "-al"]
-#ENTRYPOINT [ "/entrypoint.sh" ]
+RUN chmod +x entrypoint.sh
+
+#CMD ["/bin/ls", "-al"]
+ENTRYPOINT [ "/entrypoint.sh" ]
